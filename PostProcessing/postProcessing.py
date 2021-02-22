@@ -21,7 +21,9 @@ for file in os.listdir(directory):
                 data = dev.readlines()
                 for words in lines:
                     print("Including word :",words," in : ",file,"\n")
-                    if ~re.search(words,text) :
+                    if re.search(words,text) :
+                        None
+                    else:
                         for line in data:
                             if re.search(words,line):
                                 source.write(line)
