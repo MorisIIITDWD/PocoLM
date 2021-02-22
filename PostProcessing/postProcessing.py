@@ -20,12 +20,16 @@ for file in os.listdir(directory):
                 text = open(directory + '/' + file,'r').read()
                 data = dev.readlines()
                 for words in lines:
-                    print("Including word :",words," in : ",file,"\n")
+                    #print("Including word :",words," in : ",file,"\n")
                     if re.search(words,text) :
                         None
                     else:
+                        count = 0
                         for line in data:
                             if re.search(words,line):
                                 source.write(line)
+                                count = count + 1
+                            if count == 3 :
+                                break
 
 
