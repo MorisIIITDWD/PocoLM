@@ -13,7 +13,7 @@ devDir = sys.argv[3] # Where the 10% extracted lines are present.
 
 for file in os.listdir(directory):
     if file != "dev.txt":
-        
+        None
 
 
 
