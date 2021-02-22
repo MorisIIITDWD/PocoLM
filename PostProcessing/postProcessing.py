@@ -20,6 +20,7 @@ for file in os.listdir(directory):
                 text = source.read()
                 data = dev.readlines()
                 for words in lines:
+                    print("Including word :",words," in : ",file,"\n")
                     if ~re.search(words,text) :
                         for line in data:
                             if re.search(words,line):
